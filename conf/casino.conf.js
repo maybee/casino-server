@@ -7,9 +7,9 @@ exports = module.exports = {
 		client_req: 20141130
 	},
 	redis: {
-		host: 'rediscloud:BYgX8DGWRBhUOH13g2cmktOmGurk0tm8@redis-13811.c1.eu-west-1-3.ec2.cloud.redislabs.com',
+		host: 'redis://rediscloud@redis-13811.c1.eu-west-1-3.ec2.cloud.redislabs.com',
 		port: 13811,
-		passwd: null
+		passwd: 'BYgX8DGWRBhUOH13g2cmktOmGurk0tm8'
 	},
 	new_user : {
 		coins: 10000,
