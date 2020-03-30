@@ -7,9 +7,9 @@ exports = module.exports = {
 		client_req: 20141130
 	},
 	redis: {
-		host: require(‘url’).parse(process.env.REDISCLOUD_URL).host,
-		port: require(‘url’).parse(process.env.REDISCLOUD_URL).port,
-		passwd: require(‘url’).parse(process.env.REDISCLOUD_URL).auth.split(“:”)[1]
+		host: '',
+		port: 1,
+		passwd: null
 	},
 	new_user : {
 		coins: 10000,
