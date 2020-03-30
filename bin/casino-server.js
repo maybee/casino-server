@@ -4,8 +4,9 @@
 
 var Server = require('../lib/login_server'),
 	Casino = require('../lib/game_server'),
-	conf = require('../conf/casino.conf.js'),
-url = require(‘url’)
+	conf = require('../conf/casino.conf.js');
+
+var url = require(‘url’);
 
 var argv = require('minimist')(process.argv.slice(2));
 
