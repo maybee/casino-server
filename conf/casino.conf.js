@@ -7,7 +7,7 @@ exports = module.exports = {
 		client_req: 20141130
 	},
 	redis: {
-		host: 'redis-13992.c226.eu-west-1-3.ec2.cloud.redislabs.com',
+		host: 'rediscloud:7Gdn1fP68wUEGVIin5kGapPzGrp6Ua5m@redis-13992.c226.eu-west-1-3.ec2.cloud.redislabs.com',
 		port: 13992,
 		passwd: null
 	},
