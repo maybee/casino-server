@@ -13,7 +13,8 @@ if(argv.h) conf.server.host = argv.h;
 
 conf.redis.host=url.parse(process.env.REDISCLOUD_URL).host; 
 conf.redis.port=url.parse(process.env.REDISCLOUD_URL).port; 
-conf.redis.passwd=url.parse(process.env.REDISCLOUD_URL).auth.split(“:”)[1]; 
+conf.redis.passwd= '7Gdn1fP68wUEGVIin5kGapPzGrp6Ua5m';
+//url.parse(process.env.REDISCLOUD_URL).auth.split(“:”)[1]; 
 
 
 if(argv.r) {
