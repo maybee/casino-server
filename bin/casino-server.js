@@ -4,12 +4,18 @@
 
 var Server = require('../lib/login_server'),
 	Casino = require('../lib/game_server'),
-	conf = require('../conf/casino.conf.js');
+	conf = require('../conf/casino.conf.js'),
+url = require(‘url’)
 
 var argv = require('minimist')(process.argv.slice(2));
 
 if(argv.p) conf.server.port = argv.p;
 if(argv.h) conf.server.host = argv.h;
+
+conf.redis.host=url.parse(process.env.REDISCLOUD_URL).host; 
+conf.redis.port=url.parse(process.env.REDISCLOUD_URL).port; 
+conf.redis.passwd=url.parse(process.env.REDISCLOUD_URL).auth.split(“:”)[1]; 
+
 
 if(argv.r) {
 	var words = argv.r.split(':');
