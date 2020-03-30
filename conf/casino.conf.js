@@ -7,8 +7,8 @@ exports = module.exports = {
 		client_req: 20141130
 	},
 	redis: {
-		host: 'h:pa261a251d2c8b9052c577a5f20347c342a8a8b7af0b97998ce543e989171024a@ec2-52-30-63-143.eu-west-1.compute.amazonaws.com',
-		port: 12339,
+		host: 'redis-13992.c226.eu-west-1-3.ec2.cloud.redislabs.com',
+		port: 13992,
 		passwd: null
 	},
 	new_user : {
