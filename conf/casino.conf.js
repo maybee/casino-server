@@ -6,12 +6,11 @@ exports = module.exports = {
 		server: 20141201,
 		client_req: 20141130
 	},
-	redis: URI.parse(process.env.REDISCLOUD_URL),
-	//{
-	//	host: 'redis-13992.c226.eu-west-1-3.ec2.cloud.redislabs.com',
-	//	port: 13992,
-	//	passwd: '7Gdn1fP68wUEGVIin5kGapPzGrp6Ua5m'
-	//},
+	redis: {
+		host: 'redis-13992.c226.eu-west-1-3.ec2.cloud.redislabs.com',
+		port: 13992,
+		passwd: '7Gdn1fP68wUEGVIin5kGapPzGrp6Ua5m'
+	},
 	new_user : {
 		coins: 10000,
 		score: 0,
