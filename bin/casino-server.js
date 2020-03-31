@@ -4,20 +4,16 @@ var Server = require('../lib/login_server'),
 	Casino = require('../lib/game_server'),
 	conf = require('../conf/casino.conf.js');
 
-var url = require('url');
+var redis_url = require('url').parse("redis://redistogo:d0aecc63770576ffc8eea3e87127e9ac@porgy.redistogo.com:11811/")
 
 var argv = require('minimist')(process.argv.slice(2));
 
 if(argv.p) conf.server.port = argv.p;
 if(argv.h) conf.server.host = argv.h;
 
-conf.redis.host= 'redis-13992.c226.eu-west-1-3.ec2.cloud.redislabs.com';
-//url.parse(process.env.REDISCLOUD_URL).host; 
-conf.redis.port=13992;
-//url.parse(process.env.REDISCLOUD_URL).port; 
-conf.redis.passwd= '7Gdn1fP68wUEGVIin5kGapPzGrp6Ua5m';
-//url.parse(process.env.REDISCLOUD_URL).auth.split(“:”)[1]; 
-
+conf.redis.host= redis_url.hostname;
+conf.redis.port=redis_url.port;
+conf.redis.auth=redis_url.auth;
 
 if(argv.r) {
 	var words = argv.r.split(':');
